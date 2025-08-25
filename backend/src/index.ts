@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 3001;
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
     ? [
-        'https://tu-frontend-url.vercel.app',
-        'https://docutrack.vercel.app' // Cambia por tu dominio
+        process.env.FRONTEND_URL || 'https://docutrack-frontend-xxx.vercel.app',
+        'https://docutrack.vercel.app'
       ]
     : 'http://localhost:3000',
   credentials: true,

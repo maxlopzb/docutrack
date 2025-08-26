@@ -3,10 +3,10 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-// Imports con paths corregidos
-const authRoutes = require('./src/routes/auth').default || require('./src/routes/auth');
-const certificateRoutes = require('./src/routes/certificates').default || require('./src/routes/certificates');
-const adminRoutes = require('./src/routes/admin').default || require('./src/routes/admin');
+// Importar las rutas correctamente
+import authRoutes from './src/routes/auth';
+import certificateRoutes from './src/routes/certificates';
+import adminRoutes from './src/routes/admin';
 
 dotenv.config();
 
